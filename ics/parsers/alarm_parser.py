@@ -41,9 +41,8 @@ class AudioAlarmParser(BaseAlarmParser):
 
 
 class DisplayAlarmParser(BaseAlarmParser):
-    @option(required=True)
     def parse_description(alarm, line):
-        alarm.display_text = unescape_string(line.value) if line else None
+        alarm.display_text = unescape_string(line.value) if line else ''
 
 
 class EmailAlarmParser(BaseAlarmParser):
